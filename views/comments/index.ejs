@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments Index</title>
+</head>
+
+<body>
+    <h1>Comments</h1>
+    <ul>
+        <% comments.forEach(comment=> { %>
+            <li>
+                <%= comment.text %> - <b>
+                        <%= comment.username%>
+                    </b>
+            </li>
+            <a href='/comments/<%= comment.id %>'>details</a>
+            <a href='/comments/<%= comment.id %>/edit'>edit</a>
+            <%}); %>
+    </ul>
+    <a href="/comments/new">Add new</a>
+</body>
+
+</html>
